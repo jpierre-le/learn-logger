@@ -11,8 +11,8 @@ import { SampleFunctionDefinition } from "../functions/sample_function.ts";
  */
 const SampleWorkflow = DefineWorkflow({
   callback_id: "sample_workflow",
-  title: "学習進捗ロガー",
-  description: "学習の進捗率を記録するワークフロー",
+  title: "Learning Progress Logger",
+  description: "Record learning progress workflow",
   input_parameters: {
     properties: {
       interactivity: {
@@ -37,18 +37,18 @@ const SampleWorkflow = DefineWorkflow({
 const inputForm = SampleWorkflow.addStep(
   Schema.slack.functions.OpenForm,
   {
-    title: "学習進捗の記録",
+    title: "Record Learning Progress",
     interactivity: SampleWorkflow.inputs.interactivity,
-    submit_label: "記録する",
+    submit_label: "Record",
     fields: {
       elements: [{
         name: "channel",
-        title: "進捗を記録するチャンネル",
+        title: "Channel to record progress",
         type: Schema.slack.types.channel_id,
         default: SampleWorkflow.inputs.channel,
       }, {
         name: "progress",
-        title: "学習の進捗率 (%)",
+        title: "Learning progress (%)",
         type: Schema.types.number,
         minimum: 0,
         maximum: 100,

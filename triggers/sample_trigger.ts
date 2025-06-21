@@ -9,8 +9,8 @@ import SampleWorkflow from "../workflows/sample_workflow.ts";
  */
 const sampleTrigger: Trigger<typeof SampleWorkflow.definition> = {
   type: TriggerTypes.Shortcut,
-  name: "学習進捗を記録する",
-  description: "学習の進捗率を記録して、経過日数との比較を表示します",
+  name: "Record Learning Progress",
+  description: "Record learning progress and compare with elapsed days",
   workflow: `#/workflows/${SampleWorkflow.definition.callback_id}`,
   inputs: {
     interactivity: {

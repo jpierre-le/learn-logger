@@ -8,8 +8,9 @@ import SampleObjectDatastore from "./datastores/sample_datastore.ts";
  * https://api.slack.com/automation/manifest
  */
 export default Manifest({
-  name: "festive-mink-997",
-  description: "学習の進捗率を記録して経過日数と比較するSlackアプリ",
+  name: "learn logger",
+  displayName: "learn logger",
+  description: "learn logger",
   icon: "assets/default_new_app_icon.png",
   workflows: [SampleWorkflow],
   outgoingDomains: [],

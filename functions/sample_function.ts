@@ -9,9 +9,9 @@ import type SampleObjectDatastore from "../datastores/sample_datastore.ts";
  */
 export const SampleFunctionDefinition = DefineFunction({
   callback_id: "sample_function",
-  title: "学習進捗処理",
-  description: "学習の進捗率を記録して処理する",
-  source_file: "functions/sample_function.ts",
+  title: "Process Learning Progress",
+  description: "Record and process learning progress",
+  source_file: "./functions/sample_function.ts",
   input_parameters: {
     properties: {
       progress: {
